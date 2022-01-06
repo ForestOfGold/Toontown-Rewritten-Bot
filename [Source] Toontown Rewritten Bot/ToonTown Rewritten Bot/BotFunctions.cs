@@ -18,7 +18,6 @@ namespace ToonTown_Rewritten_Bot
         {
             //click red button
             DoMouseClickDown(getCursorLocation());
-            Thread.Sleep(10);
 
             //get the coords of the red button and move cursor from there, downward
             int[] coordinates = getCoordinates("15");

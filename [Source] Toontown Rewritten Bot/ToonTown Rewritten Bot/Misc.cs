@@ -48,9 +48,9 @@ namespace ToonTown_Rewritten_Bot
         private static void send(String text)
         {
             BotFunctions.DoMouseClick();
-            Thread.Sleep(500);
+            Thread.Sleep(250);
             InputSimulator.SimulateTextEntry(text);
-            Thread.Sleep(500);
+            Thread.Sleep(250);
             SendKeys.SendWait("{ENTER}");
         }
 

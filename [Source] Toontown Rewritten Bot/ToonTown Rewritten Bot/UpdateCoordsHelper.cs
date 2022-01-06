@@ -21,7 +21,7 @@ namespace ToonTown_Rewritten_Bot
             bool showMessageOnce = true;
             if(showMessageOnce)
             {
-                MessageBox.Show("This will help you update your coordinates to work with\nwith your screen. Please move your cursor onto the\nlocation that is says it is updating.");
+                MessageBox.Show("This will help you update your coordinates to work with\nwith your screen. Please click OK and then move your mouse \nto the location of the button.");
                 showMessageOnce = false;
             }
         }
