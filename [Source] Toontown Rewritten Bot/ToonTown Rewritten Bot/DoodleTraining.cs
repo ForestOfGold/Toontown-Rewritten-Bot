@@ -18,7 +18,6 @@ namespace ToonTown_Rewritten_Bot
             infiniteTimeCheckBox = unlimitedCheckBox;
             justFeedCheckBox = justFeed;
             justScratchCheckBox = justScratch;
-            Thread.Sleep(2000);
             feedAndScratch();
         }
 
@@ -31,9 +30,12 @@ namespace ToonTown_Rewritten_Bot
                     numberOfScratches = 0;
                 else if (justScratchCheckBox)
                     numberOfFeeds = 0;
+                else if (justScratchCheckBox && justFeedCheckBox) { // tick both boxes to not scratch or feed
+                    numberOfScratches = 0;
+                    numberOfFeeds = 0;
+                }
                 while (numberOfFeeds > 0 || numberOfScratches > 0)
                 {
-                    Thread.Sleep(5000);
                     if (numberOfFeeds > 0)//feed doodle
                     {
                         feedDoodle();
@@ -45,6 +47,10 @@ namespace ToonTown_Rewritten_Bot
                         numberOfScratches--; 
                     }
                     determineSelectedTrick();//perform trick
+                }
+                while (numberOfFeeds == 0 && numberOfScratches == 0)
+                {
+                    determineSelectedTrick();
                 }
             }
             else //infinite checkbox is checked, so loop until stopped
@@ -61,14 +67,12 @@ namespace ToonTown_Rewritten_Bot
                         scratchDoodle();
                     }
                     determineSelectedTrick();
-                    Thread.Sleep(5000);
                 }
             }
         }
 
         public static void determineSelectedTrick()
         {
-            Thread.Sleep(1000);
             switch (selectedTrick)
             {
                 case "Jump (5 - 10 laff)":
@@ -178,6 +182,24 @@ namespace ToonTown_Rewritten_Bot
             }
         }
 
+        public static void trainJump()
+        {
+            //check if coordinates for the button is (0,0). True means they're not (0,0).
+            if (BotFunctions.checkCoordinates("23"))
+            {
+                getCoords("23");
+                BotFunctions.MoveCursor(x, y);
+                BotFunctions.DoMouseClick();
+                Thread.Sleep(10);
+            }
+            else//means it was (0,0) and needs updated
+            {
+                BotFunctions.updateCoordinates("23");
+                Thread.Sleep(2000);
+                trainJump();
+            }
+        }
+
         public static void trainBeg()
         {
             //check if coordinates for the button is (0,0). True means they're not (0,0).
@@ -186,7 +208,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("24");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(20);
+                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
@@ -204,7 +226,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("25");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(20);
+                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
@@ -222,7 +244,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("26");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(20);
+                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
@@ -240,7 +262,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("27");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(20);
+                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
@@ -258,7 +280,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("28");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(20);
+                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
@@ -276,31 +298,13 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("29");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(20);
+                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("29");
                 Thread.Sleep(2000);
                 trainSpeak();
-            }
-        }
-
-        public static void trainJump()
-        {
-            //check if coordinates for the button is (0,0). True means they're not (0,0).
-            if (BotFunctions.checkCoordinates("23"))
-            {
-                getCoords("23");
-                BotFunctions.MoveCursor(x, y);
-                BotFunctions.DoMouseClick();
-                Thread.Sleep(20);
-            }
-            else//means it was (0,0) and needs updated
-            {
-                BotFunctions.updateCoordinates("23");
-                Thread.Sleep(2000);
-                trainJump();
             }
         }
 

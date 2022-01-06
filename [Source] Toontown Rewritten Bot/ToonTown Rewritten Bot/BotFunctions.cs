@@ -18,14 +18,14 @@ namespace ToonTown_Rewritten_Bot
         {
             //click red button
             DoMouseClickDown(getCursorLocation());
-            Thread.Sleep(500);//sleep 2 sec
+            Thread.Sleep(10);
 
             //get the coords of the red button and move cursor from there, downward
             int[] coordinates = getCoordinates("15");
             int x = coordinates[0];
             int y = coordinates[1];
             MoveCursor(x, (y+150));//pull it back
-            Thread.Sleep(500);
+            Thread.Sleep(10);
             DoMouseClickUp(getCursorLocation());
         }
         private static void DoMouseClick(Point location)//simulate left button mouse click
