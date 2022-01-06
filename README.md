@@ -1,4 +1,4 @@
-Source code for my ToonTown Rewritten Bot. - primetime43
+<h1>ToonTown Rewritten Bot</h1>
 
 Updated by Forestpupoozzle for speed.
 
