@@ -128,7 +128,7 @@ namespace ToonTown_Rewritten_Bot
 
         public static void openSpeedChat()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(10);
             //Below is the location for the SpeedChat button location
             //check if coordinates for the button is (0,0). True means they're not (0,0).
             if (BotFunctions.checkCoordinates("20"))
@@ -136,7 +136,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("20");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(1000);
+                Thread.Sleep(10);
 
                 //Below is the location for pets tab
                 //check if coordinates for the button is (0,0). True means they're not (0,0).
@@ -145,7 +145,7 @@ namespace ToonTown_Rewritten_Bot
                     getCoords("21");
                     BotFunctions.MoveCursor(x, y);
                     BotFunctions.DoMouseClick();
-                    Thread.Sleep(1000);
+                    Thread.Sleep(10);
 
                     //Below is the location for tricks tab
                     //check if coordinates for the button is (0,0). True means they're not (0,0).
@@ -154,7 +154,7 @@ namespace ToonTown_Rewritten_Bot
                         getCoords("22");
                         BotFunctions.MoveCursor(x, y);
                         BotFunctions.DoMouseClick();
-                        Thread.Sleep(1000);
+                        Thread.Sleep(10);
                     }
                     else
                     {
@@ -186,7 +186,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("24");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(2000);
+                Thread.Sleep(20);
             }
             else//means it was (0,0) and needs updated
             {
@@ -204,7 +204,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("25");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(2000);
+                Thread.Sleep(20);
             }
             else//means it was (0,0) and needs updated
             {
@@ -222,7 +222,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("26");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(2000);
+                Thread.Sleep(20);
             }
             else//means it was (0,0) and needs updated
             {
@@ -240,7 +240,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("27");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(2000);
+                Thread.Sleep(20);
             }
             else//means it was (0,0) and needs updated
             {
@@ -258,7 +258,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("28");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(2000);
+                Thread.Sleep(20);
             }
             else//means it was (0,0) and needs updated
             {
@@ -276,7 +276,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("29");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(2000);
+                Thread.Sleep(20);
             }
             else//means it was (0,0) and needs updated
             {
@@ -294,7 +294,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("23");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(2000);
+                Thread.Sleep(20);
             }
             else//means it was (0,0) and needs updated
             {
