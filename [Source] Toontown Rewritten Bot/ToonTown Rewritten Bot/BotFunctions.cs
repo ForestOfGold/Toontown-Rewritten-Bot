@@ -101,7 +101,7 @@ namespace ToonTown_Rewritten_Bot
         {
             try
             {
-                lines = File.ReadAllLines(Path.GetFullPath("Coordinates_Data_File.txt"));
+                lines = File.ReadAllLines(Path.GetFullPath("CoordinatesDataFile.txt"));
             }
             catch (Exception e)
             {
@@ -115,7 +115,7 @@ namespace ToonTown_Rewritten_Bot
             lines = File.ReadAllLines(Path.GetFullPath("Coordinates_Data_File.txt"));
             try
             {
-                using (StreamWriter writer = new StreamWriter(Path.GetFullPath("Coordinates_Data_File.txt")))
+                using (StreamWriter writer = new StreamWriter(Path.GetFullPath("CoordinatesDataFile.txt")))
                 {
                     for (int i = 0; i < lines.Length; i++)
                     {
@@ -136,7 +136,7 @@ namespace ToonTown_Rewritten_Bot
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(Path.GetFullPath("Coordinates_Data_File.txt")))
+                using (StreamWriter writer = new StreamWriter(Path.GetFullPath("CoordinatesDataFile.txt")))
                 {
                     for (int i = 0; i < line.Length; i++)
                     {
@@ -157,7 +157,7 @@ namespace ToonTown_Rewritten_Bot
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(Path.GetFullPath("Coordinates_Data_File.txt")))
+                using (StreamWriter writer = new StreamWriter(Path.GetFullPath("CoordinatesDataFile.txt")))
                 {
                     for (int i = 0; i < lines.Length; i++)
                     {
@@ -189,7 +189,7 @@ namespace ToonTown_Rewritten_Bot
             Point coords = getCursorLocation();
             string x = Convert.ToString(coords.X);
             string y = Convert.ToString(coords.Y);
-            lines = File.ReadAllLines(Path.GetFullPath("Coordinates_Data_File.txt"));
+            lines = File.ReadAllLines(Path.GetFullPath("CoordinatesDataFile.txt"));
             for (int i = 0; i < lines.Length; i++)
             {
                 if (lines[i].Contains("."))
@@ -205,7 +205,7 @@ namespace ToonTown_Rewritten_Bot
 
         public static int[] getCoordinates(String coordsToRetrieve)
         {
-            lines = File.ReadAllLines(Path.GetFullPath("Coordinates_Data_File.txt"));
+            lines = File.ReadAllLines(Path.GetFullPath("CoordinatesDataFile.txt"));
             for (int i = 0; i < lines.Length; i++)
             {
                 if (lines[i].Contains("."))
@@ -229,7 +229,7 @@ namespace ToonTown_Rewritten_Bot
 
         public static bool checkCoordinates(String checkCoords)
         {
-            lines = File.ReadAllLines(Path.GetFullPath("Coordinates_Data_File.txt"));
+            lines = File.ReadAllLines(Path.GetFullPath("CoordinatesDataFile.txt"));
             for (int i = 0; i < lines.Length; i++)
             {
                 if (lines[i].Contains("."))
@@ -252,7 +252,7 @@ namespace ToonTown_Rewritten_Bot
 
         public static void resetAllCoordinates()
         {
-            lines = File.ReadAllLines(Path.GetFullPath("Coordinates_Data_File.txt"));
+            lines = File.ReadAllLines(Path.GetFullPath("CoordinatesDataFile.txt"));
             String[] test = new String[lines.Length]; 
             for(int i = 0; i < Form1.dataFileMap.Count; i++)
             {
