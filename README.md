@@ -1,6 +1,4 @@
-<h1>ToonTown Rewritten Bot</h1> by primetime43
-
-Updated by Forestpupoozzle for speed.
+<h1>ToonTown Rewritten Bot</h1> by primetime43. Updated by Forestpupoozzle for speed.
 
 Video of the program (Version 1.0) here: https://youtu.be/V99R-XxamC0
 
