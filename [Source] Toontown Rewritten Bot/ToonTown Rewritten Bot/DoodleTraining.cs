@@ -9,15 +9,15 @@ namespace ToonTown_Rewritten_Bot
     {
         public static int numberOfFeeds, numberOfScratches;
         private static string selectedTrick;
-        private static bool infiniteTimeCheckBox, justFeedCheckBox, justScratchCheckBox;
-        public static void startTrainingDoodle(int feeds, int scratches, bool unlimitedCheckBox, string trick, bool justFeed, bool justScratch)
+        private static bool infiniteTimeCheckBox, feedCheckBox, scratchCheckBox;
+        public static void startTrainingDoodle(int feeds, int scratches, bool unlimitedCheckBox, string trick, bool feed, bool scratch)
         {
             numberOfFeeds = feeds;
             numberOfScratches = scratches;
             selectedTrick = trick;
             infiniteTimeCheckBox = unlimitedCheckBox;
-            justFeedCheckBox = justFeed;
-            justScratchCheckBox = justScratch;
+            feedCheckBox = feed;
+            scratchCheckBox = scratch;
             feedAndScratch();
         }
 
@@ -26,14 +26,11 @@ namespace ToonTown_Rewritten_Bot
             if (!infiniteTimeCheckBox)//infinite checkbox is not checked
             {
                 //code here is required so it doesn't get stuck in infinite loop below
-                if (justFeedCheckBox)
+                if (feedCheckBox)
                     numberOfScratches = 0;
-                else if (justScratchCheckBox)
+                else if (scratchCheckBox)
                     numberOfFeeds = 0;
-                else if (justScratchCheckBox && justFeedCheckBox) { // tick both boxes to not scratch or feed
-                    numberOfScratches = 0;
-                    numberOfFeeds = 0;
-                }
+
                 while (numberOfFeeds > 0 || numberOfScratches > 0)
                 {
                     if (numberOfFeeds > 0)//feed doodle
@@ -48,22 +45,22 @@ namespace ToonTown_Rewritten_Bot
                     }
                     determineSelectedTrick();//perform trick
                 }
-                while (numberOfFeeds == 0 && numberOfScratches == 0)
-                {
-                    determineSelectedTrick();
-                }
             }
             else //infinite checkbox is checked, so loop until stopped
             {
                 while (true)
                 {
-                    if (justFeedCheckBox)//just feed is checked
-                        feedDoodle();
-                    else if (justScratchCheckBox)//just scratch is checked
-                        scratchDoodle();
-                    else if(!justFeedCheckBox && !justScratchCheckBox)//neither are checked, so do both
+                    if (feedCheckBox && scratchCheckBox)//feed and scratch are checked
                     {
                         feedDoodle();
+                        scratchDoodle();
+                    }
+                    else if (feedCheckBox)//feed is checked
+                    {
+                        feedDoodle();
+                    }
+                    else if (scratchCheckBox)//scratch is checked
+                    {
                         scratchDoodle();
                     }
                     determineSelectedTrick();
@@ -76,63 +73,76 @@ namespace ToonTown_Rewritten_Bot
             switch (selectedTrick)
             {
                 case "Jump (5 - 10 laff)":
-                    for(int i = 0; i < 2; i++)//attempt trick 2 times incase doodle gets confused
+                    callDoodle();
+                    for(int i = 0; i < 60; i++)//attempt trick 60 times
                     {
                         openSpeedChat();
                         trainJump();
+                        Thread.Sleep(1000);
                     }
                     break;
                 case "Beg (6 - 12 laff)":
-                    for (int i = 0; i < 2; i++)//attempt trick 2 times incase doodle gets confused
+                    callDoodle();
+                    for(int i = 0; i < 60; i++)//attempt trick 60 times
                     {
                         openSpeedChat();
                         trainBeg();
+                        Thread.Sleep(1000);
                     }
                     break;
                 case "Play Dead (7 - 14 laff)":
-                    for (int i = 0; i < 2; i++)//attempt trick 2 times incase doodle gets confused
+                    callDoodle();
+                    for(int i = 0; i < 60; i++)//attempt trick 60 times
                     {
                         openSpeedChat();
                         trainPlayDead();
+                        Thread.Sleep(1000);
                     }
                     break;
                 case "Rollover (8 - 16 laff)":
-                    for (int i = 0; i < 2; i++)//attempt trick 2 times incase doodle gets confused
+                    callDoodle();
+                    for(int i = 0; i < 60; i++)//attempt trick 60 times
                     {
                         openSpeedChat();
                         trainRollover();
+                        Thread.Sleep(1000);
                     }
                     break;
                 case "Backflip (9 - 18 laff)":
-                    for (int i = 0; i < 2; i++)//attempt trick 2 times incase doodle gets confused
+                    callDoodle();
+                    for(int i = 0; i < 60; i++)//attempt trick 60 times
                     {
                         openSpeedChat();
                         trainBackflip();
+                        Thread.Sleep(1000);
                     }
                     break;
                 case "Dance (10 - 20 laff)":
-                    for (int i = 0; i < 2; i++)//attempt trick 2 times incase doodle gets confused
+                    callDoodle();
+                    for(int i = 0; i < 60; i++)//attempt trick 60 times
                     {
                         openSpeedChat();
                         trainDance();
+                        Thread.Sleep(1000);
                     }
                     break;
                 case "Speak (11 - 22 laff)":
-                    for (int i = 0; i < 2; i++)//attempt trick 2 times incase doodle gets confused
+                    callDoodle();
+                    for(int i = 0; i < 60; i++)//attempt trick 60 times
                     {
                         openSpeedChat();
                         trainSpeak();
+                        Thread.Sleep(1000);
                     }
                     break;
                 default:
-                    MessageBox.Show("Error!");
+                    MessageBox.Show("Error. Please select a trick to train.");
                     break;
             }
         }
 
         public static void openSpeedChat()
         {
-            Thread.Sleep(10);
             //Below is the location for the SpeedChat button location
             //check if coordinates for the button is (0,0). True means they're not (0,0).
             if (BotFunctions.checkCoordinates("20"))
@@ -140,7 +150,7 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("20");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
+                Thread.Sleep(100);
 
                 //Below is the location for pets tab
                 //check if coordinates for the button is (0,0). True means they're not (0,0).
@@ -149,7 +159,7 @@ namespace ToonTown_Rewritten_Bot
                     getCoords("21");
                     BotFunctions.MoveCursor(x, y);
                     BotFunctions.DoMouseClick();
-                    Thread.Sleep(10);
+                    Thread.Sleep(100);
 
                     //Below is the location for tricks tab
                     //check if coordinates for the button is (0,0). True means they're not (0,0).
@@ -158,26 +168,23 @@ namespace ToonTown_Rewritten_Bot
                         getCoords("22");
                         BotFunctions.MoveCursor(x, y);
                         BotFunctions.DoMouseClick();
-                        Thread.Sleep(10);
+                        Thread.Sleep(100);
                     }
                     else
                     {
                         BotFunctions.updateCoordinates("22");
-                        Thread.Sleep(2000);
                         openSpeedChat();
                     }
                 }
                 else
                 {
                     BotFunctions.updateCoordinates("21");
-                    Thread.Sleep(2000);
                     openSpeedChat();
                 }
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("20");
-                Thread.Sleep(2000);
                 openSpeedChat();
             }
         }
@@ -190,12 +197,10 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("23");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("23");
-                Thread.Sleep(2000);
                 trainJump();
             }
         }
@@ -208,12 +213,10 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("24");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("24");
-                Thread.Sleep(2000);
                 trainBeg();
             }
         }
@@ -226,12 +229,10 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("25");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("25");
-                Thread.Sleep(2000);
                 trainPlayDead();
             }
         }
@@ -244,12 +245,10 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("26");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("26");
-                Thread.Sleep(2000);
                 trainRollover();
             }
         }
@@ -262,12 +261,10 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("27");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("27");
-                Thread.Sleep(2000);
                 trainBackflip();
             }
         }
@@ -280,12 +277,10 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("28");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("28");
-                Thread.Sleep(2000);
                 trainDance();
             }
         }
@@ -298,12 +293,10 @@ namespace ToonTown_Rewritten_Bot
                 getCoords("29");
                 BotFunctions.MoveCursor(x, y);
                 BotFunctions.DoMouseClick();
-                Thread.Sleep(10);
             }
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("29");
-                Thread.Sleep(2000);
                 trainSpeak();
             }
         }
@@ -321,7 +314,6 @@ namespace ToonTown_Rewritten_Bot
             else//means it was (0,0) and needs updated
             {
                 BotFunctions.updateCoordinates("18");
-                Thread.Sleep(2000);
                 feedDoodle();
             }
         }
@@ -338,8 +330,55 @@ namespace ToonTown_Rewritten_Bot
             else
             {
                 BotFunctions.updateCoordinates("19");
-                Thread.Sleep(2000);
                 scratchDoodle();
+            }
+        }
+
+        public static void callDoodle()
+        {
+            //Below is the location for the SpeedChat button location
+            //check if coordinates for the button is (0,0). True means they're not (0,0).
+            if (BotFunctions.checkCoordinates("20"))
+            {
+                getCoords("20");
+                BotFunctions.MoveCursor(x, y);
+                BotFunctions.DoMouseClick();
+                Thread.Sleep(100);
+
+                //Below is the location for pets tab
+                //check if coordinates for the button is (0,0). True means they're not (0,0).
+                if (BotFunctions.checkCoordinates("21"))
+                {
+                    getCoords("21");
+                    BotFunctions.MoveCursor(x, y);
+                    BotFunctions.DoMouseClick();
+                    Thread.Sleep(100);
+
+                    //Below is the location for "Here Boy!" button
+                    //check if coordinates for the button is (0,0). True means they're not (0,0).
+                    if (BotFunctions.checkCoordinates("30"))
+                    {
+                        getCoords("30");
+                        BotFunctions.MoveCursor(x, y);
+                        BotFunctions.DoMouseClick();
+                        Thread.Sleep(1000);
+                    }
+                    else//means it was (0,0) and needs updated
+                    {
+                        BotFunctions.updateCoordinates("30");
+                        openSpeedChat();
+                    }
+                }
+                else//means it was (0,0) and needs updated
+                {
+                    BotFunctions.updateCoordinates("21");
+                    openSpeedChat();
+                }
+            }
+            else//means it was (0,0) and needs updated
+            {
+                BotFunctions.updateCoordinates("20");
+                openSpeedChat();
             }
         }
 

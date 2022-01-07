@@ -79,7 +79,7 @@ namespace ToonTown_Rewritten_Bot
             DialogResult confirmation;
             while (!(Process.GetProcessesByName("TTREngine").Length > 0))
             {
-                confirmation = MessageBox.Show("Press OK once running or Cancel.","ToonTown Rewritten is not running!", MessageBoxButtons.OKCancel);
+                confirmation = MessageBox.Show("Press OK once running or Cancel.", "ToonTown Rewritten is not running!", MessageBoxButtons.OKCancel);
                 if (confirmation.Equals(DialogResult.Cancel))
                     Environment.Exit(0);
             }
@@ -122,6 +122,7 @@ namespace ToonTown_Rewritten_Bot
             dataFileMap.Add("27", "Backflip Trick Option in SpeedChat");
             dataFileMap.Add("28", "Dance Trick Option in SpeedChat");
             dataFileMap.Add("29", "Speak Trick Option in SpeedChat");
+            dataFileMap.Add("30", "Here Boy Option in SpeedChat");
 
         }
 
@@ -365,7 +366,7 @@ namespace ToonTown_Rewritten_Bot
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox3.Checked)
+            if (checkBox3.Checked)
             {
                 numericUpDown5.Enabled = false;
                 numericUpDown6.Enabled = false;
@@ -406,12 +407,11 @@ namespace ToonTown_Rewritten_Bot
             if (checkBox4.Checked)
             {
                 numericUpDown5.Enabled = false;
-                checkBox5.Checked = false;
             }
             else
             {
                 numericUpDown5.Enabled = true;
-                if(checkBox3.Checked)
+                if (checkBox3.Checked)
                 {
                     numericUpDown6.Enabled = false;
                     numericUpDown5.Enabled = false;
@@ -424,7 +424,6 @@ namespace ToonTown_Rewritten_Bot
             if (checkBox5.Checked)
             {
                 numericUpDown6.Enabled = false;
-                checkBox4.Checked = false;
             }
             else
             {
@@ -435,6 +434,11 @@ namespace ToonTown_Rewritten_Bot
                     numericUpDown5.Enabled = false;
                 }
             }
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
