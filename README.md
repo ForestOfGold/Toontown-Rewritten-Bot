@@ -1,4 +1,4 @@
-<h1>ToonTown Rewritten Bot</h1>
+<h1>ToonTown Rewritten Bot</h1> by primetime43
 
 Updated by Forestpupoozzle for speed.
 
