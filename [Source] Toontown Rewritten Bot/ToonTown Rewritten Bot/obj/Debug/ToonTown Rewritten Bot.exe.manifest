@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ToonTown Rewritten Bot.exe" size="773120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ToonTown Rewritten Bot.exe" size="775680">
       <assemblyIdentity name="ToonTown Rewritten Bot" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bjbf7JFJ0bEVNQDKc5pDq53k0vB1SqtGxoB/3UqvEF8=</dsig:DigestValue>
+        <dsig:DigestValue>Q7sVNi1VGk9f5FxNnf6mU38z9+A5yGtMdkQjpySsjrY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,13 +75,13 @@
       <dsig:DigestValue>nYN21QqSD+AR6IKLTnYiGXqcyJl/sDbLq0YCx7mQCXg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ToonTown Rewritten Bot.exe.config" size="189">
+  <file name="ToonTown Rewritten Bot.exe.config" size="184">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+      <dsig:DigestValue>FihlZtVNgcNyH37Pf0Jtll3jZOm+L55ijXNjtoS2/mo=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

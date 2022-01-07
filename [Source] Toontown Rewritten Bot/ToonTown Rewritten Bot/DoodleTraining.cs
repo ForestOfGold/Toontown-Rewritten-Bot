@@ -74,7 +74,7 @@ namespace ToonTown_Rewritten_Bot
             {
                 case "Jump (5 - 10 laff)":
                     callDoodle();
-                    for(int i = 0; i < 60; i++)//attempt trick 60 times
+                    for(int i = 0; i < 20; i++)
                     {
                         openSpeedChat();
                         trainJump();
@@ -83,7 +83,7 @@ namespace ToonTown_Rewritten_Bot
                     break;
                 case "Beg (6 - 12 laff)":
                     callDoodle();
-                    for(int i = 0; i < 60; i++)//attempt trick 60 times
+                    for(int i = 0; i < 20; i++)
                     {
                         openSpeedChat();
                         trainBeg();
@@ -92,7 +92,7 @@ namespace ToonTown_Rewritten_Bot
                     break;
                 case "Play Dead (7 - 14 laff)":
                     callDoodle();
-                    for(int i = 0; i < 60; i++)//attempt trick 60 times
+                    for(int i = 0; i < 20; i++)
                     {
                         openSpeedChat();
                         trainPlayDead();
@@ -101,7 +101,7 @@ namespace ToonTown_Rewritten_Bot
                     break;
                 case "Rollover (8 - 16 laff)":
                     callDoodle();
-                    for(int i = 0; i < 60; i++)//attempt trick 60 times
+                    for(int i = 0; i < 20; i++)
                     {
                         openSpeedChat();
                         trainRollover();
@@ -110,7 +110,7 @@ namespace ToonTown_Rewritten_Bot
                     break;
                 case "Backflip (9 - 18 laff)":
                     callDoodle();
-                    for(int i = 0; i < 60; i++)//attempt trick 60 times
+                    for(int i = 0; i < 20; i++)
                     {
                         openSpeedChat();
                         trainBackflip();
@@ -119,7 +119,7 @@ namespace ToonTown_Rewritten_Bot
                     break;
                 case "Dance (10 - 20 laff)":
                     callDoodle();
-                    for(int i = 0; i < 60; i++)//attempt trick 60 times
+                    for(int i = 0; i < 20; i++)
                     {
                         openSpeedChat();
                         trainDance();
@@ -128,7 +128,7 @@ namespace ToonTown_Rewritten_Bot
                     break;
                 case "Speak (11 - 22 laff)":
                     callDoodle();
-                    for(int i = 0; i < 60; i++)//attempt trick 60 times
+                    for(int i = 0; i < 20; i++)
                     {
                         openSpeedChat();
                         trainSpeak();
