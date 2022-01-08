@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ToonTown_Rewritten_Bot
 {
@@ -15,12 +16,30 @@ namespace ToonTown_Rewritten_Bot
         {
             //isTTRRunning();
             InitializeComponent();
+            generateCoordinatesFile();
             BotFunctions.readTextFile();
-            createDataFileMap();
             loadCoordsIntoResetBox();
         }
 
         //important functions for bot
+        private void generateCoordinatesFile() //generate CoordinatesDataFile.txt
+        {
+            //try
+            //{
+                string fileName = "./CoordinatesDataFile.txt";
+                // Check if file doesnt exist
+                if (!File.Exists(fileName))
+                    File.Create(fileName);
+                createDataFileMap();
+                BotFunctions.resetAllCoordinates();
+            //}
+            //catch
+            //{
+                //MessageBox.Show("Please make sure this application is in a valid folder to generate the required coordinates file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                //Application.Exit();
+            //}
+        }
+
         private void startSpamButton_Click(object sender, EventArgs e)//spam message on screen
         {//if the user presses ALT key, it will break the loop
             bool loopBroken = ToonTown_Rewritten_Bot.Misc.sendMessage(messageToType.Text, Convert.ToInt32(numericUpDown2.Value), checkBox1.Checked, numericUpDown2);
