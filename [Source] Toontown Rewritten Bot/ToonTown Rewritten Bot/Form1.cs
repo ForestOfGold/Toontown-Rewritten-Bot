@@ -16,28 +16,29 @@ namespace ToonTown_Rewritten_Bot
         {
             //isTTRRunning();
             InitializeComponent();
-            generateCoordinatesFile();
             BotFunctions.readTextFile();
+            createDataFileMap();
             loadCoordsIntoResetBox();
         }
 
         //important functions for bot
-        private void generateCoordinatesFile() //generate CoordinatesDataFile.txt
+        private void generateCoordinatesFile() //generate CoordinatesDataFile.txt. Not used currently due to "file already being used" exception.
         {
-            //try
-            //{
-                string fileName = "./CoordinatesDataFile.txt";
+            try
+            {
+                createDataFileMap();
+                string fileName = @"./CoordinatesDataFile.txt";
                 // Check if file doesnt exist
                 if (!File.Exists(fileName))
+                {
                     File.Create(fileName);
-                createDataFileMap();
-                BotFunctions.resetAllCoordinates();
-            //}
-            //catch
-            //{
-                //MessageBox.Show("Please make sure this application is in a valid folder to generate the required coordinates file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //Application.Exit();
-            //}
+                    BotFunctions.resetAllCoordinates();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please make sure this application is in a valid folder to generate the required coordinates file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
         }
 
         private void startSpamButton_Click(object sender, EventArgs e)//spam message on screen
@@ -142,7 +143,6 @@ namespace ToonTown_Rewritten_Bot
             dataFileMap.Add("28", "Dance Trick Option in SpeedChat");
             dataFileMap.Add("29", "Speak Trick Option in SpeedChat");
             dataFileMap.Add("30", "Here Boy Option in SpeedChat");
-
         }
 
         /*private void button4_Click(object sender, EventArgs e)

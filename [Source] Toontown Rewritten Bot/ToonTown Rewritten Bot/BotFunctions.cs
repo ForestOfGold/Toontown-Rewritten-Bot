@@ -168,7 +168,7 @@ namespace ToonTown_Rewritten_Bot
             }
             catch (Exception e)
             {
-                Console.WriteLine("The file could not be written to:");
+                Console.WriteLine("The file could not be written to.");
                 Console.WriteLine(e.Message);
             }
         }

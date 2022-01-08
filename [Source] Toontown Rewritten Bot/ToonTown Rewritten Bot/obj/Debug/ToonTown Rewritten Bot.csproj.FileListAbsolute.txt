@@ -91,3 +91,24 @@ C:\Users\brian\Source\Repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten B
 C:\Users\brian\Source\Repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.exe.manifest
 C:\Users\brian\Source\Repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.application
 C:\Users\brian\Source\Repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.csproj.CopyComplete
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\bin\Debug\ToonTown Rewritten Bot.exe.config
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\bin\Debug\ToonTown Rewritten Bot.exe.manifest
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\bin\Debug\ToonTown Rewritten Bot.application
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\bin\Debug\ToonTown Rewritten Bot.exe
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\bin\Debug\ToonTown Rewritten Bot.pdb
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.csproj.AssemblyReference.cache
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.csproj.SuggestedBindingRedirects.cache
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown_Rewritten_Bot.AboutBox1.resources
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown_Rewritten_Bot.Form1.resources
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown_Rewritten_Bot.Help.resources
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown_Rewritten_Bot.Plants.resources
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown_Rewritten_Bot.Properties.Resources.resources
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown_Rewritten_Bot.UpdateCoordsHelper.resources
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.csproj.GenerateResource.cache
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.csproj.CoreCompileInputs.cache
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.TrustInfo.xml
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.exe.manifest
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.application
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.csproj.CopyComplete
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.exe
+C:\Users\bccas\source\repos\Toontown-Rewritten-Bot\[Source] Toontown Rewritten Bot\ToonTown Rewritten Bot\obj\Debug\ToonTown Rewritten Bot.pdb
